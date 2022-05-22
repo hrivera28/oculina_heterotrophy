@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#$ -N sc
+#$ -P coral
+
+#$ -j yes
+#$ -V
+#$ -cwd
+#$ -l h_rt=11:59:59
+#$ -pe omp 1
+
+#$ -t 1:23
+#$ -tc 200
+
+sed -n -e "$SGE_TASK_ID p" /project/coral/Oculina_het_tagSeq/sc_array_commands.txt | bash

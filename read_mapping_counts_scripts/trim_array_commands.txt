@@ -1,0 +1,23 @@
+tagseq_clipper.pl Oc-C4_S23_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-Q6_S2_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-M1_S9_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-G1_S18_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-J13_S17_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filte$
+tagseq_clipper.pl Oc-E3_S20_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-R7_S3_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-C2_S22_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-R2_S7_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-Q1_S13_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-L4_S4_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-M5_S5_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-I5_S6_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-B1_S12_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-O11_S19_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filte$
+tagseq_clipper.pl Oc-B2_S11_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-J15_S8_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-B8_S16_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-G3_S21_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-J9_S14_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-N4_S10_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter$
+tagseq_clipper.pl Oc-B5_S1_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter $
+tagseq_clipper.pl Oc-N14_S15_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filte$

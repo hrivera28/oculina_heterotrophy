@@ -1,0 +1,38 @@
+### Read mapping pipeline
+## Modified from the Matz lab tagSeq pipeline
+
+### Step 1 Concatenate the host and sym transcriptome
+# Copied over final transcriptomes
+cp ../host_transc/collapsed/O_arbuscula_transcriptome/* ./
+cp ../sym_transc/collapsed/B_psygmophilum_transcriptome/* ./
+
+# Concatenate both transcriptomes and respective files
+cat B_psygmophilum_transcriptome.fasta >> O_arbuscula_transcriptome.fasta
+cat B_psygmophilum_isogroup_to_genename.tab >> O_arbuscula_isogroup_to_genename.tab
+cat B_psygmophilum_isogroup_to_GOterm.tab >> O_arbuscula_isogroup_to_GOterm.tab
+cat B_psygmophilum_sequenceID_to_isogroup.tab >> O_arbuscula_sequenceID_to_isogroup.tab
+
+# Rename files
+mv O_arbuscula_transcriptome.fasta holobiont.fasta
+mv O_arbuscula_isogroup_to_GOterm.tab holobiont_iso2go.tab
+mv O_arbuscula_isogroup_to_genename.tab holobiont_iso2gene.tab
+mv O_arbuscula_sequenceID_to_isogroup.tab holobiont_seq2iso.tab
+
+### Step 2 Trim adapaters and quality filter (trim_array.qsub)
+tagseq_clipper.pl Oc-C4_S23_L007_R1_001.fastq | fastx_clipper -a AAAAAAAA -l 20 -Q33 | fastx_clipper -a AGATCGGAAG -l 20 -Q33 | fastq_quality_filter -Q33 -q 20 -p 90 >Oc-C4_S23_L007_R1_001.fastq.trim
+# this was repeated for each input fastq file using a batch array script (trim_array.qsub)
+
+### Step 3 Map Reads (maps_array.qsub)
+bowtie2 --local -x holobiont.fasta -U Oc-M5_S5_L007_R1_001.fastq.trim -S Oc-M5_S5_L007_R1_001.fastq.trim.sam --no-hd --no-sq --no-unal -k 5
+# -no-hd suppress sam @ header lines
+# -no-sq suppres sam @SQ header lines
+# -no-unal don't print reads that didn't align
+# this was repeated for each input fastq file using a batch array script (maps_array.qsub)
+
+### Step 4 Get counts (sc_array.qsub)
+samcount.pl Oc-N4_S10_L007_R1_001.fastq.trim.sam holobiont_seq2iso.tab aligner=bowtie2 >Oc-N4_S10_L007_R1_001.fastq.trim.sam.counts
+# this was repeated for each input fastq file using a batch array script (sc_array.qsub)
+
+### Step 5 Combine counts (expression_compiler.pl)
+./expression_compiler.pl *.counts > ocu_het_counts.txt
+# outputs of step 4 as arg1 here 
